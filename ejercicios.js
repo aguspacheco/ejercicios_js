@@ -1,10 +1,20 @@
-// Ejercicio 1
+/**
+ * Para cada punto, escribir e invocar las funciones necesarias.
+El código debe ubicarse en un archivo con extensión .js que debe ser incluido en el
+documento ejercicios_js.html con el tag adecuado.
+
+Ejercicio 1. Que imprima "¡Hola, Mundo!" en la consola.
+
+ */
 function holaMundo() {
   console.log("¡Hola mundo!");
 }
 holaMundo();
 
-// Ejercicio 2
+/**
+ * Ejercicio 2. Que cree un nodo de tipo h1 dentro del elemento con selector .para-h1 y
+dentro del nodo coloque el texto con su nombre de pila.
+ */
 function crearTitulo() {
   const contenedor = document.querySelector(".para-h1");
   const titulo = document.createElement("h1");
@@ -13,7 +23,12 @@ function crearTitulo() {
 }
 crearTitulo();
 
-// Ejercicio 3
+/**
+ * Ejercicio 3. Que tenga las funciones para las operaciones matemáticas básicas: suma,
+resta, multiplicación y división. Utilice los controles provistos en el documento
+html para tomar los parámetros y ejecutar las operaciones. Muestre el
+resultado en el elemento con el selector #resultado (atributo value).
+ */
 function sumar(a, b) {
   return a + b;
 }
@@ -53,7 +68,10 @@ function hacerOperaciones(operacion) {
   resultadoInput.value = resultado;
 }
 
-// Ejercicio 4
+/**
+ * Ejercicio 4. Que tome los elementos con selector .list-group-item y los muestre por
+consola.
+ */
 function mostrarListaEnConsola() {
   const elementos = document.querySelectorAll(".list-group-item");
   elementos.forEach((item, index) => {
@@ -62,7 +80,11 @@ function mostrarListaEnConsola() {
 }
 mostrarListaEnConsola();
 
-// Ejercicio 5
+/**
+ * Ejercicio 5. Que invierta el texto con selector #para-invertir p y coloque el resultado en
+el elemento con el selector #texto-invertido p. (atributo innerText)
+ */
+
 function invertirTexto() {
   const textoOriginal = document.querySelector("#para-invertir p").innerText;
   const textoInvertido = textoOriginal.split("").reverse().join("");
@@ -70,7 +92,10 @@ function invertirTexto() {
 }
 invertirTexto();
 
-// Ejercicio 6
+/**
+ * Ejercicio 6. Que consulte el atributo “nombre” del objeto JSON y lo coloque en el elemento
+con selector #nombre-json.
+ */
 const persona = {
   nombre: "Agustin",
   edad: 27,
@@ -82,7 +107,9 @@ function mostrarNombreJSON() {
 }
 mostrarNombreJSON();
 
-// Ejercicio 7
+/**
+ * Ejercicio 7. Que coloque como string el objeto JSON en el elemento con selector #json-obj
+ */
 function mostrarObjetoJSON() {
   const jsonString = JSON.stringify(persona);
   document.querySelector("#json-obj").innerText = jsonString;
